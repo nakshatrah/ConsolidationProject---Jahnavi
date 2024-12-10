@@ -2,7 +2,8 @@ import random
 import diceRoll
 import tupleOut
 import fixedDice
-    
+
+# [peer edit (nakshatra)]: at the bottom of each function, don't forget to run a test calling the function and comment it out. 
 def player_turn(player, scores):
     print(f"\nPlayer {player + 1}'s turn ==============================================================================================")
     roll = diceRoll.dice_roll()
@@ -26,6 +27,7 @@ def player_turn(player, scores):
             if i not in if_fixed:
                 roll[i] = random.randint(1, 6)
         if_fixed = fixedDice.fixed_dice(roll)
+        # add tests here and comment them out to meet requirements for final submission
 
 def game(target_score):
     scores = [0, 0]
@@ -40,7 +42,8 @@ def game(target_score):
     if scores[0] >= target_score:
         winner = 1
     else:
-        winner = 2
+        winner = 2 
+    # add test for game function
     
     print(f"\nFinal Scores: Player 1 = {scores[0]}, Player 2 = {scores[1]}")
     print(f"Player {winner} wins!")
